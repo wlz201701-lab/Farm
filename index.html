@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#7ec8f2">
+<title>Back Forty Farm</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<noscript><p style="padding:20px;font-size:20px">This farm stand needs JavaScript turned on. Sorry about that!</p></noscript>
+
+<div id="scene" aria-hidden="true"></div>
+<div id="critters" aria-hidden="true">
+  <div class="crit" style="--dur:42s;--delay:-6s;bottom:3%" data-snd="cluck"><span>🐔</span></div>
+  <div class="crit" style="--dur:55s;--delay:-30s;bottom:6%;font-size:32px" data-snd="cluck"><span>🐓</span></div>
+  <div class="crit" style="--dur:70s;--delay:-12s;bottom:1.5%;font-size:34px" data-snd="cluck"><span>🐥</span></div>
+  <div class="crit cow" style="--dur:120s;--delay:-50s;bottom:9%;font-size:54px" data-snd="moo"><span>🐄</span></div>
+  <div class="butterfly">🦋</div>
+</div>
+
+<header class="topbar">
+  <a class="brand" href="#/" id="brand">🌾 Farm</a>
+  <div class="tools">
+    <button class="pill" id="cancelLink" type="button">Cancel with code</button>
+    <button class="pill" id="soundBtn" type="button" aria-label="Toggle sound">🔊</button>
+  </div>
+</header>
+<div id="demoRibbon">DEMO MODE: nothing is being sent or saved</div>
+<div id="adminBar" hidden><span>👨‍🌾 Farmer mode is ON</span><button id="adminOut" type="button">Log out</button></div>
+
+<main id="app"></main>
+<footer class="foot"><a href="#/admin">Farmer login</a></footer>
+
+<button id="navTab" type="button" aria-label="Open the page menu" aria-expanded="false">🧭 Pages</button>
+<div id="drawerBack"></div>
+<nav id="drawer" aria-label="Site pages"></nav>
+
+<button id="fab" type="button" aria-label="Open basket">🧺 <span>Basket</span> <span class="n" id="fabN">0</span></button>
+
+<dialog id="checkout"><div class="dlg" id="checkoutBody"></div></dialog>
+<dialog id="reserveDlg"><div class="dlg" id="reserveBody"></div></dialog>
+<dialog id="bookDlg"><div class="dlg" id="bookBody"></div></dialog>
+<dialog id="customDlg"><div class="dlg" id="customBody"></div></dialog>
+<dialog id="thanks"><div class="dlg" id="thanksBody"></div></dialog>
+<dialog id="cancelDlg"><div class="dlg" id="cancelBody"></div></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+<script src="data.js"></script>
+<script src="pages.js"></script>
+</body>
+</html>
